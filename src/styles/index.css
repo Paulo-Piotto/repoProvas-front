@@ -31,6 +31,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 ol, ul {
 	list-style: none;
@@ -50,4 +53,10 @@ table {
 
 h1{
   font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+*{
+	box-sizing: border-box;
 }
