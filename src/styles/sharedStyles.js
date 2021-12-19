@@ -78,6 +78,14 @@ const Form = styled.form`
     width: 100%;
 `
 
+const InfoField = styled.div`
+    margin: 30px 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
 export {
     Container,
     Button,
@@ -86,4 +94,5 @@ export {
     Title,
     TextButton,
     Form,
+    InfoField,
 }

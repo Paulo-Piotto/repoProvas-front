@@ -1,39 +1,39 @@
 import { Container, TextButton, Title, Select, InfoField } from "../styles/sharedStyles";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getAllTeachers, getTeacherTests } from "../services/api.services";
+import { getSubjects, getSubjectTests} from "../services/api.services";
 import Test from "./test";
 
-export default function ByTeacher(){
+export default function BySubject(){
     const navigate = useNavigate();
-    const [teachers, setTeachers] = useState([]);
-    const [teacher, setTeacher] = useState('');
+    const [subjects, setSubjects] = useState([]);
+    const [subject, setSubject] = useState('');
     const [tests, setTests] = useState([]);
 
     useEffect(() => {
-        getAllTeachers()
-            .then((resp) => setTeachers([...resp.data]))
+        getSubjects()
+            .then((resp) => setSubjects([...resp.data]))
             .catch((err) => console.log(err));
 
-        if(teacher){
-            getTeacherTests(teacher)
+        if(subject){
+            getSubjectTests(subject)
                 .then((resp) => setTests([...resp.data]))
                 .catch((err) => console.log(err));
         }else{
             setTests([]);
         }
-    }, [teacher]);
+    }, [subject]);
 
     return (
         <Container>
             <Title>Selecione a prova:</Title>
-            <Select onChange={(e) => {setTeacher(e.target.value)}}>
-                <option value=''>Professor</option>
-                {teachers.map((teacher) => <option key={teacher.id} value={teacher.name}>{teacher.name}</option>)}
+            <Select onChange={(e) => {setSubject(e.target.value)}}>
+                <option value=''>Disciplina</option>
+                {subjects.map((subject) => <option key={subject.id} value={subject.name}>{subject.name}</option>)}
             </Select>
             <InfoField>
                 {tests[0] ?
-                tests.map((test) => <Test test={test} type={'teacher'} key={test.id} />) :
+                tests.map((test) => <Test test={test} type={'subject'} key={test.id} />) :
                 <p>Nenhuma prova encontrada</p>}
             </InfoField>
 
