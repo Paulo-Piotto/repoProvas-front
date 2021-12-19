@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import { Container, Button, Input, Select, Title, TextButton, Form } from "../styles/sharedStyles";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -59,7 +60,7 @@ export default function NewTest(){
             <Form onSubmit={(e) => sendNewTest(e)}>
             <Input placeholder="Nome da Prova" onChange={(e) => {setName(e.target.value)}} required/>
             <Select onChange={(e) => {setCategory(e.target.value)}} required>
-                <option value=''>Categoria</option>
+                <option value='' >Categoria</option>
                 <option>P1</option>
                 <option>P2</option>
                 <option>P3</option>
@@ -67,11 +68,11 @@ export default function NewTest(){
                 <option>Outras</option>
             </Select>
             <Select onChange={(e) => {setSubject(e.target.value)}} required>
-                <option value=''>Disciplina</option>
+                <option value='' >Disciplina</option>
                 {allSubjects.map((subject) => <option key={subject.id} value={subject.name}>{subject.name}</option>)}
             </Select>
             <Select onChange={(e) => {setTeacher(e.target.value)}} required>
-                <option value=''>Professor</option>
+                <option value='' >Professor</option>
                 {teachers.map((teacher) => <option key={teacher.id} value={teacher.name}>{teacher.name}</option>)}
             </Select>
             <Input placeholder="URL da prova" onChange={(e) => {setUrl(e.target.value)}} required/>

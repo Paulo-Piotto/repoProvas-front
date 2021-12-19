@@ -14,12 +14,23 @@ function getSubjectTeachers(subject) {
     return axios.get(`${URL}/teachers/${encodedSubject}`);
 }
 
+function getAllTeachers() {
+    return axios.get(`${URL}/teachers`);
+}
+
 function sendTest(test) {
     return axios.post(`${URL}/send-test`, test);
+}
+
+function getTeacherTests(teacher) {
+    const encodedTeacher = encodeURI(teacher);
+    return axios.get(`${URL}/get-tests/teacher/${encodedTeacher}`);
 }
 
 export{
     getSubjects,
     getSubjectTeachers,
     sendTest,
+    getAllTeachers,
+    getTeacherTests,
 }
