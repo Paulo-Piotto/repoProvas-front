@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export default function Test({test}){
+export default function Test({test, type}){
     return (
         <Anchor href={test.url}>
             <Container>
                 <p><span>Nome: </span>{test.name}</p>
-                <p><span>Disciplina: </span>{test.subject}</p>
+                {type === 'teacher' ? <p><span>Disciplina: </span>{test.subject}</p> :
+                <p><span>Professor(a): </span>{test.teacher}</p> }
                 <p><span>Categoria: </span>{test.category}</p>
             </Container>
         </Anchor>

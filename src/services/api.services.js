@@ -27,10 +27,16 @@ function getTeacherTests(teacher) {
     return axios.get(`${URL}/get-tests/teacher/${encodedTeacher}`);
 }
 
+function getSubjectTests(subject) {
+    const encodedSubject = encodeURI(subject);
+    return axios.get(`${URL}/get-tests/subject/${encodedSubject}`);
+}
+
 export{
     getSubjects,
     getSubjectTeachers,
     sendTest,
     getAllTeachers,
     getTeacherTests,
+    getSubjectTests,
 }
