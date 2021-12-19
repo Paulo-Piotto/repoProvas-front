@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:4000";
-
-// "https://back-repo-provas-paulo.herokuapp.com"
+const URL = "https://back-repo-provas-paulo.herokuapp.com";
 
 
 function getSubjects() {
