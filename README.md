@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+<h1 align="center">
+     📝 <a href="#" alt="site do ecoleta">RepoProvas</a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+    📝 Seu app preferido para encontrar as provas antigas dos professores e se preparar melhor! 
+</h3>
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+<h4 align="center">
+	🚧   Concluído 🚀 🚧
+</h4>
 
-### `npm start`
+---
+<br><br>
+Tabela de conteúdos
+=================
+<!--ts-->
+   * [Sobre o projeto](#-sobre-o-projeto)
+   * [Funcionalidades](#-funcionalidades)
+   * [Como executar o projeto](#-como-executar-o-projeto)
+     * [Pré-requisitos](#pré-requisitos)
+     * [Rodando a aplicação web (Frontend)](#frontend)
+   * [Tecnologias](#-tecnologias)
+     * [WebSite](#Website)
+   * [Autor](#-autor)
+<!--te-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="./public/assets/repoProvas-demo.gif" width="330px"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## 💻 Sobre o projeto
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📝 RepoProvas é um repositório de provas onde os alunos podem postar suas provas antigas e ajudar toda a comunidade a se preparar melhor paras as provas na faculdade! 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Projeto desenvolvido durante a **Formação Driven** oferecida pela [Driven Education](https://www.driven.com.br/?utm_source=search&utm_medium=google-ads&utm_campaign=branding&gclid=Cj0KCQiA7oyNBhDiARIsADtGRZa8cqYastMgHzxSP4gfGdixu6ib79VG7zi6xrecJNkRGD1D2Ap7k20aAuxIEALw_wcB).
+Durante as semanas de projeto na formação Driven, os instrutores passam os requisitos que o projeto deve atingir, porém todo o código da aplicação é desenvolvido pelo autor [Paulo Piotto](https://github.com/Paulo-Piotto)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Funcionalidades
 
-### `npm run eject`
+- [x] Ná página inicial o usuário pode escolher entre enviar uma nova prova ou ver uma prova.
+- [x] Caso escolher enviar uma nova prova, o usuário precisa preencher os dados desse prova, que são:
+    - Nome
+    - Categoria, que só pode ser: P1/P2/P3/2ch/Outras
+    - Disciplina
+    - Professor
+    - URL para o PDF da prova
+- [x] Agora, pra quem entra na plataforma querendo visualizar uma prova, tem duas opções:
+    - listar as provas por professor
+    - listar as provas por disciplina
+- [x] Se escolher por professor, aparece uma lista com todos os professores cadastrados, indicando a quantidade de provas de cada um. Ao escolher então um professor, aparecem suas provas separadas por tipo (P1, P2, etc). Cada prova tem o nome e a disciplina, e quando clicadas abrem o link do pdf.
+- [x] Já se a pessoa escolher ver as provas por disciplina, é um comportamento semelhante. Ao clicar então em uma disciplina, são exibidas as provas agrupadas por tipo (P1, P2, etc), com o nome da prova e do professor que aplicou. Ao clicar na prova, abre-se o link do pdf.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Como executar o projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Este projeto é divido em duas partes:
+1. Backend (https://github.com/Paulo-Piotto/repoProvas-back) 
+2. Frontend (https://github.com/Paulo-Piotto/repoProvas-front)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O deploy do Backend foi realizado na plataforma gratuita Heroku, e o deploy do Frontend foi realizado na plataforma gratuita Vercel.
 
-## Learn More
+💡Tanto o Frontend quanto o Backend estão disponíveis online e funcionando através do link: https://grati-box-front-tawny.vercel.app/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Basta acessar o link e testar a aplicação!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+💡O Backend também está disponível e pode ser acessado ao realizar requisições para o endereço: https://back-repo-provas-paulo.herokuapp.com/
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🛠 Tecnologias
 
-### Analyzing the Bundle Size
+As seguintes ferramentas foram usadas na construção do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### **Website**  ([React](https://reactjs.org/))
 
-### Making a Progressive Web App
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[Axios](https://github.com/axios/axios)**
+-   **[Styled Components](https://styled-components.com/)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> Veja o arquivo  [package.json](https://github.com/Paulo-Piotto/repoProvas-front/blob/main/package.json)
 
-### Advanced Configuration
+#### **Server**  ([NodeJS](https://nodejs.org/en/))
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-   **[TypeScript](https://www.typescriptlang.org/)**
+-   **[Express](https://expressjs.com/)**
+-   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
+-   **[Postgres](https://node-postgres.com/)**
+-   **[TypeORM](https://typeorm.io/#/)**
+-   **[dotENV](https://github.com/motdotla/dotenv)**
+-   **[Joi](https://github.com/hapijs/joi)**
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> Veja o arquivo  [package.json](https://github.com/Paulo-Piotto/repoProvas-back/blob/main/package.json)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🦸 Autor
+
+<a href="https://www.linkedin.com/in/paulo-henrique-amancio-piotto-b745a1167/">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/83779118?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Paulo Piotto</b></sub></a> <a href="https://www.linkedin.com/in/paulo-henrique-amancio-piotto-b745a1167/">🚀</a>
+ <br />
+
+---
+
+Feito com ❤️ por Paulo Piotto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/paulopiotto/)
+
+---
